@@ -1,15 +1,16 @@
-name: "hola mundo"
+name: "deploy to server"
 
 on:
   push:
     branches: ["main"]
   
 jobs: 
-  deploy-mio:
+
+  first_job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: python3 -m venv env
-      - run: echo "hacemos pull del code"
-      - run: echo "correr migraciones"
-      - run: echo "generar version"
+    
+      - name: hola munndo
+        run: echo "hola mundo"
+
+  
