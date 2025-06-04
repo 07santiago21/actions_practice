@@ -15,27 +15,10 @@ jobs:
     steps:
           
       - name: hola munndo
-        run: echo "hola mundo $name
+        id: step1
+        run: echo "variable= holaaa mundo" >>  $GITHUB_OUTPUT
         
-
+      - name: print variablee
+        run: echo "${{ steps.step1.outputs.variable }}"
       
-      - name: antes checkout
-        
-        run : ls -al
-        
-      - name: action
-        uses: actions/checkout@v4
-
-
-      - name: after checkout
-        run : ls -al
-
-  second_job:
-    if: ${{ github.ref == 'refs/heads/main' }}
-    needs: first_job
-    runs-on: ubuntu-latest
     
-    steps:
-    
-      - name: hola munndo 2
-        run: echo "hola mundo 2"
