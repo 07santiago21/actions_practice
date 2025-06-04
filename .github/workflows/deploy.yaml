@@ -8,10 +8,14 @@ jobs:
 
   first_job:
     runs-on: ubuntu-latest
-    steps:
+    env:
+      name: "hola mundo"
     
+    
+    steps:
+          
       - name: hola munndo
-        run: echo "hola mundo"
+        run: echo "hola mundo $name"
 
   second_job:
     if: ${{ github.ref == 'refs/heads/main' }}
