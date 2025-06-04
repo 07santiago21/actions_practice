@@ -21,9 +21,7 @@ jobs:
       
       - name: antes checkout
         
-        run :
-          - echo "after checkout" 
-          - ls -al
+        run : ls -al
         
       - name: action
         uses: actions/checkout@v4
