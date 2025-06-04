@@ -15,7 +15,21 @@ jobs:
     steps:
           
       - name: hola munndo
-        run: echo "hola mundo $name"
+        run: echo "hola mundo $name
+        
+
+      
+      - name: antes checkout
+        run: echo "after checkout"
+        run : ls -al
+        
+      - name: action
+        uses: actions/checkout@v4
+
+
+      - name: after checkout
+        run: echo "after checkout"
+        run : ls -al
 
   second_job:
     if: ${{ github.ref == 'refs/heads/main' }}
