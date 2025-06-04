@@ -22,7 +22,7 @@ jobs:
       - name: antes checkout
         
         run :
-          - echo "after checkout 
+          - echo "after checkout" 
           - ls -al
         
       - name: action
