@@ -20,15 +20,16 @@ jobs:
 
       
       - name: antes checkout
-        run: echo "after checkout"
-        run : ls -al
+        
+        run :
+          - echo "after checkout 
+          - ls -al
         
       - name: action
         uses: actions/checkout@v4
 
 
       - name: after checkout
-        run: echo "after checkout"
         run : ls -al
 
   second_job:
